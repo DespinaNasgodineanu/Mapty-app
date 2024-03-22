@@ -239,8 +239,10 @@ class App {
   _renderWorkout(workout) {
     let html = `
           <li class="workout workout--${workout.type}" data-id="${workout.id}">
-              <h2 class="workout__title">${workout.description}
-              </h2>
+             <div class="title">
+                <h2 class="workout__title">${workout.description}</h2>  
+                <button class="btn_delete"></button>
+              </div> 
             <div class="workout__details">
               <span class="workout__icon">${
                 workout.type === "running" ? "🏃‍♂️" : "🚴‍♀️"
@@ -267,8 +269,7 @@ class App {
               <span class="workout__value">${workout.cadence}</span>
               <span class="workout__unit">spm</span>
             </div>
-            <button class="btn_delete"></button>
-            <button class="btn_edit"></button>
+         
           </li>
           `;
 
@@ -284,8 +285,6 @@ class App {
               <span class="workout__value">${workout.elevationGain}</span>
               <span class="workout__unit">m</span>
             </div>
-            <button class="btn_delete"></button>
-            <button class="btn_edit"></button>
           </li>
           `;
 
@@ -297,9 +296,6 @@ class App {
       this.parentElement.remove();
       localStorage.removeItem("workouts");
     });
-    //edit button
-    const btnEdit = document.querySelector(".btn_edit");
-    btnEdit.innerHTML = "Edit";
   }
 
   _moveToPopup(e) {

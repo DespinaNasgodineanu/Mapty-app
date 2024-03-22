@@ -221,9 +221,13 @@ a:visited {
 
 
 /*Delete button*/
-.form_button{
+.title{
+  display: flex;
+  grid-area: 1/1/last-line/6;
+  justify-content: space-between
 }
-.btn_delete{
+.btn_delete{ 
+  align-self: center;
   margin-right: 100px;
   background-color: #fff;
   font-family:Georgia, 'Times New Roman', Times, serif;
@@ -238,17 +242,4 @@ a:visited {
   cursor: pointer;
   opacity: 0.8;
   transition: all 0.2s;
-}
-
-/*Button edit*/
-.btn_edit{
-  margin-right: 100px;
-  background-color: #fff;
-  font-family:Georgia, 'Times New Roman', Times, serif;
-  font-size: 14px;
-  padding: 2px 5px;
-  border:0.1 black;
-  opacity: 1;
-  border-radius:5px;
-  box-shadow:none;
 }
