@@ -48,6 +48,11 @@ a:visited {
   display: flex;
   flex-direction: column;
 }
+@media screen and (max-width : 1000px ) {
+  .sidebar {
+    padding: 1.5rem 3rem 2rem 3rem;
+  }
+}
 
 .logo {
   height: 5.2rem;
@@ -67,6 +72,7 @@ a:visited {
 }
 
 .workout {
+  position: relative;
   background-color: var(--color-dark--2);
   border-radius: 5px;
   padding: 1.5rem 2.25rem;
@@ -77,6 +83,35 @@ a:visited {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 0.75rem 1.5rem;
 }
+@media screen and (max-width : 1000px ) {
+  .workout {
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.05rem;
+  }
+  .sidebar{
+    flex-basis: 0.1rem;
+  }
+
+
+}
+@media screen and (max-width : 700px ) {
+  .workout{
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-columns: 0.3fr 0.3fr 0.3fr 0.3fr;
+    gap: 0.25rem 0.5rem;
+  }
+}
+
+@media screen and (max-width : 550px ) {
+  body {
+    display: block;
+  }
+  .workouts {
+    height: 40vh;
+  }
+}
+
 .workout--running {
   border-left: 5px solid var(--color-brand--2);
 }
@@ -221,22 +256,23 @@ a:visited {
 
 
 /*Delete button*/
-.title{
-  display: flex;
-  grid-area: 1/1/last-line/6;
-  justify-content: space-between
-}
+
+
 .btn_delete{ 
-  align-self: center;
-  margin-right: 100px;
-  background-color: #fff;
-  font-family:Georgia, 'Times New Roman', Times, serif;
+  background-color:var(--color-light--2);
+  font-family:Georgia, 'Ties New Roman', Times, serif;
   font-size: 14px;
-  padding: 0.5px 5px;
+  padding: 0.2px 5px 0.5px 3px;
   border:0.1 black;
-  opacity: 1;
+  opacity: 0.9;
+  text-align: center;
   border-radius:5px;
   box-shadow:none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 10px;
+  margin-right: 10px;
 }
 .btn_delete:hover{
   cursor: pointer;
